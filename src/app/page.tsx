@@ -184,8 +184,8 @@ export default function Home() {
                 </p>
                 <p className="text-gray-300 text-xl">
                   <strong className="text-blue-500">שעות פעילות:</strong><br />
-                  א'-ה': 09:00-18:00<br />
-                  ו': 09:00-14:00
+                  א&apos;-ה&apos;: 09:00-18:00<br />
+                  ו&apos;: 09:00-14:00
                 </p>
               </div>
             </div>
@@ -220,8 +220,8 @@ export default function Home() {
             <div className="text-right">
               <h4 className="text-2xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent">שעות פעילות</h4>
               <p className="text-gray-400 text-lg">
-                א'-ה': 09:00-18:00<br />
-                ו': 09:00-14:00
+                א&apos;-ה&apos;: 09:00-18:00<br />
+                ו&apos;: 09:00-14:00
               </p>
             </div>
           </div>
