@@ -1,8 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function PreviewPage({ searchParams }: { searchParams: Record<string, string | string[] | undefined> }) {
-  const img = searchParams.img as string | undefined;
+type PreviewPageProps = {
+  searchParams?: { img?: string }
+};
+
+export default function PreviewPage({ searchParams }: PreviewPageProps) {
+  const img = searchParams?.img;
 
   if (!img) {
     return (
