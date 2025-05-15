@@ -1,11 +1,8 @@
-"use client";
-import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function PreviewPage() {
-  const searchParams = useSearchParams();
-  const img = searchParams.get('img');
+export default function PreviewPage({ searchParams }: { searchParams: { img?: string } }) {
+  const img = searchParams.img;
 
   if (!img) {
     return (
