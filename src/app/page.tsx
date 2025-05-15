@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ArrowRight, Code, Cpu, Globe, Layers, MessageSquare } from "lucide-react"
+import { ArrowRight, Code, Globe, MessageSquare } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
