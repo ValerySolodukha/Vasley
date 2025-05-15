@@ -10,7 +10,7 @@ export default function Home() {
       <header className="fixed top-0 left-0 right-0 bg-[#111827]/80 backdrop-blur-md z-50 border-b border-[#F59E0B]/20">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <Image src="/screenshots/f790f3e3-043a-4508-b800-74bd70f0b694.PNG" alt="VASLY STUDIO Logo" width={56} height={56} className="object-contain" />
+            <span className="font-bold text-2xl text-white tracking-widest">VASLY STUDIO</span>
           </div>
           <nav className="hidden md:flex items-center gap-8">
             <Link href="#services" className="text-gray-300 hover:text-[#F59E0B] transition-colors">
@@ -26,7 +26,7 @@ export default function Home() {
               צור קשר
             </Link>
           </nav>
-          <Button className="bg-[#F59E0B] hover:bg-[#D97706] text-white">דבר איתי על אתר לעסק שלך</Button>
+          <Button className="bg-[#F59E0B] hover:bg-[#D97706] text-white">צור קשר עכשיו</Button>
         </div>
       </header>
 
@@ -35,26 +35,36 @@ export default function Home() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl md:text-6xl font-bold leading-tight text-white">
-                בונה לך אתר תדמית <span className="text-[#F59E0B]">ברור, פשוט ויפה</span>
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight text-white">
+                אתר שימשוך לקוחות לעסק שלך – בלי כאב ראש, בלי קוד, במחיר נגיש.
               </h1>
               <p className="mt-6 text-xl text-gray-300 leading-relaxed">
                 אתר אישי ומרשים שמתאים בדיוק לעסק שלך – בלי להסתבך ובלי לשבור את הכיס.
               </p>
               <div className="mt-4 bg-[#1F2937] p-6 rounded-lg border border-[#F59E0B]/20">
                 <p className="text-[#F59E0B] font-medium text-lg">
-                  ✨ אני לא מתכנת – אלא משתמש בבינה מלאכותית מתקדמת כדי לבנות אתרים מקצועיים לעסקים קטנים.
-                </p>
-                <p className="text-gray-300 mt-3">
-                  המטרה שלי היא ליצור עבורך אתר תדמית ברור, מודרני ומדויק – שיראה טוב, יעבוד טוב, וישרת את העסק שלך בצורה הטובה ביותר.
+                  ✨ אני לא כותב קוד – אני בונה אתרים חכמים בעזרת טכנולוגיה מתקדמת.<br />
+                  זה מאפשר לי להקים אתר מקצועי לעסק שלך במהירות, ביעילות ובמחיר נגיש.<br /><br />
+                  האתר שלך ייראה טוב, יעבוד טוב – וישרת אותך כמו שצריך.
                 </p>
               </div>
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                <Button className="bg-[#F59E0B] hover:bg-[#D97706] text-white text-lg px-8 py-6">צפה בדוגמאות</Button>
-                <Button variant="outline" className="text-[#F59E0B] border-[#F59E0B] hover:bg-[#F59E0B]/10 text-lg px-8 py-6">
-                  צור קשר
-                </Button>
+                <a href="#contact">
+                  <Button className="bg-[#F59E0B] hover:bg-[#D97706] text-black text-xl px-10 py-7 font-bold rounded-2xl shadow-lg focus:outline-none focus:ring-4 focus:ring-[#F59E0B]/50 transition-all w-full">
+                    צור קשר עכשיו
+                  </Button>
+                </a>
+                <a href="https://wa.me/972501234567" target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-green-500 hover:bg-green-600 text-white text-xl px-10 py-7 font-bold rounded-2xl shadow-lg focus:outline-none focus:ring-4 focus:ring-green-400/50 transition-all flex items-center gap-2 w-full">
+                    דבר איתי בוואטסאפ
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 12c0 4.556-3.694 8.25-8.25 8.25A8.212 8.212 0 0 1 4.5 18.2l-1.5.5.5-1.5A8.212 8.212 0 0 1 3.75 12c0-4.556 3.694-8.25 8.25-8.25S20.25 7.444 20.25 12Z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 10.5h.008v.008H8.25V10.5Zm3.75 0h.008v.008h-.008V10.5Zm3.75 0h.008v.008h-.008V10.5Z" />
+                    </svg>
+                  </Button>
+                </a>
               </div>
+              <div className="mt-4 text-lg text-[#F59E0B] font-bold">שיחת ייעוץ ראשונית בחינם!</div>
             </div>
             <div className="relative h-[400px] w-full rounded-xl overflow-hidden border border-[#F59E0B]/20">
               <Image
@@ -82,30 +92,36 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                icon: <Globe className="h-10 w-10 text-[#F59E0B]" />,
-                title: "אתר תדמית אישי",
-                description: "אתר מותאם בדיוק לעסק שלך, עם עיצוב נקי ופשוט שמעביר את המסר שלך.",
+                icon: <Globe className="h-16 w-16 text-[#F59E0B]" />,
+                title: "עיצוב מותאם אישית",
+                description: "עיצוב ייחודי שמותאם בדיוק לעסק שלך ולמה שהלקוחות שלך מחפשים.",
               },
               {
-                icon: <Code className="h-10 w-10 text-[#F59E0B]" />,
-                title: "טקסטים מקצועיים",
-                description: "תוכן מותאם אישית שמדבר בשפה שלך ומתחבר ללקוחות שלך.",
+                icon: <Code className="h-16 w-16 text-[#F59E0B]" />,
+                title: "תכנים שמדברים בשפה שלך",
+                description: "כתיבה שיווקית שמדברת ללקוחות שלך ומניעה לפעולה.",
               },
               {
-                icon: <MessageSquare className="h-10 w-10 text-[#F59E0B]" />,
-                title: "טופס יצירת קשר",
-                description: "מערכת פשוטה לקבלת פניות מלקוחות, בלי להסתבך.",
+                icon: <MessageSquare className="h-16 w-16 text-[#F59E0B]" />,
+                title: "טופס ליצירת קשר שיגרום לפניות",
+                description: "טופס פשוט, ברור ונגיש – שמביא פניות ישירות אליך.",
               },
             ].map((service, index) => (
-              <div key={index} className="bg-[#111827] p-8 rounded-xl shadow-sm border border-[#F59E0B]/20 hover:shadow-lg transition-shadow">
-                <div className="mb-6">{service.icon}</div>
-                <h3 className="text-xl font-bold mb-3 text-white">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
-                <Button variant="link" className="mt-4 p-0 text-[#F59E0B] font-medium flex items-center gap-1">
-                  קרא עוד <ArrowRight className="h-4 w-4" />
+              <div key={index} className="bg-[#111827] p-10 rounded-xl shadow-lg border border-[#F59E0B]/20 hover:shadow-2xl transition-shadow flex flex-col items-center">
+                <div className="mb-8">{service.icon}</div>
+                <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
+                <p className="text-lg text-gray-300 mb-4 text-center">{service.description}</p>
+                <Button variant="link" className="mt-auto p-0 text-[#F59E0B] font-medium flex items-center gap-1 text-lg">
+                  קרא עוד <ArrowRight className="h-5 w-5" />
                 </Button>
               </div>
             ))}
+          </div>
+        </div>
+        <div className="mt-16 flex flex-col items-center">
+          <div className="bg-[#F59E0B] text-black text-2xl font-bold px-8 py-6 rounded-2xl shadow-lg max-w-xl text-center">
+            רוצה אתר שימשוך יותר לקוחות? <br />
+            <a href="#contact" className="underline hover:text-[#D97706] transition">לחץ כאן והתחל בתהליך פשוט ונעים.</a>
           </div>
         </div>
       </section>
@@ -118,6 +134,7 @@ export default function Home() {
             <p className="mt-4 text-xl text-gray-300 max-w-2xl mx-auto">
               צפה בכמה מהפרויקטים האחרונים שלי המציגים פתרונות אתרים מקצועיים.
             </p>
+            <div className="mt-6 text-lg text-[#F59E0B] font-bold">עוד אתרים בדרך – אולי שלך?</div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -142,14 +159,16 @@ export default function Home() {
               },
             ].map((project, index) => (
               <div key={index} className="group overflow-hidden rounded-xl border border-[#F59E0B]/20 hover:shadow-lg transition-all bg-[#1F2937]">
-                <div className="relative h-64 w-full overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
+                <Link href={`/preview?img=${encodeURIComponent(project.image)}`} passHref legacyBehavior>
+                  <a className="relative h-64 w-full overflow-hidden block">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500 cursor-zoom-in"
+                    />
+                  </a>
+                </Link>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
                   <p className="text-gray-300 mb-4">{project.description}</p>
@@ -160,12 +179,22 @@ export default function Home() {
                       </span>
                     ))}
                   </div>
-                  <Button variant="outline" className="mt-2 border-[#F59E0B] text-[#F59E0B] hover:bg-[#F59E0B]/10">
-                    צפה בפרויקט
-                  </Button>
+                  <Link href={`/preview?img=${encodeURIComponent(project.image)}`} passHref legacyBehavior>
+                    <a className="inline-block mt-2">
+                      <Button variant="outline" className="border-[#F59E0B] text-[#F59E0B] hover:bg-[#F59E0B]/10 w-full">
+                        צפה בפרויקט
+                      </Button>
+                    </a>
+                  </Link>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+        <div className="mt-16 flex flex-col items-center">
+          <div className="bg-[#F59E0B] text-black text-2xl font-bold px-8 py-6 rounded-2xl shadow-lg max-w-xl text-center">
+            רוצה אתר שימשוך יותר לקוחות? <br />
+            <a href="#contact" className="underline hover:text-[#D97706] transition">לחץ כאן והתחל בתהליך פשוט ונעים.</a>
           </div>
         </div>
       </section>
@@ -178,7 +207,7 @@ export default function Home() {
             <p className="text-xl text-gray-300 mb-8">
               זה הזמן להציג את העסק שלך בצורה מקצועית – אני כאן כדי לעזור לך לבנות אתר מושלם.
             </p>
-            <Button className="bg-[#F59E0B] hover:bg-[#D97706] text-white text-lg px-8 py-6">דבר איתי על אתר לעסק שלך</Button>
+            <Button className="bg-[#F59E0B] hover:bg-[#D97706] text-white text-lg px-8 py-6">צור קשר עכשיו</Button>
           </div>
         </div>
       </section>
@@ -189,7 +218,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white">צור קשר</h2>
             <p className="mt-4 text-xl text-gray-300 max-w-2xl mx-auto">
-              בוא נדבר על האתר שלך – אני כאן כדי לעזור לך להופיע באינטרנט בצורה הכי טובה.
+              רוצה לשמוע פרטים? שלח הודעה ונחזור אליך
             </p>
           </div>
 
@@ -272,6 +301,42 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <div className="mt-6 flex justify-center">
+              <a href="https://wa.me/972501234567" target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-4 rounded-xl font-bold flex items-center gap-2 shadow-lg focus:outline-none focus:ring-4 focus:ring-green-400/50 transition-all">
+                דבר איתי בוואטסאפ
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 12c0 4.556-3.694 8.25-8.25 8.25A8.212 8.212 0 0 1 4.5 18.2l-1.5.5.5-1.5A8.212 8.212 0 0 1 3.75 12c0-4.556 3.694-8.25 8.25-8.25S20.25 7.444 20.25 12Z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 10.5h.008v.008H8.25V10.5Zm3.75 0h.008v.008h-.008V10.5Zm3.75 0h.008v.008h-.008V10.5Z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="mt-16 flex flex-col items-center">
+          <div className="bg-[#F59E0B] text-black text-2xl font-bold px-8 py-6 rounded-2xl shadow-lg max-w-xl text-center">
+            רוצה אתר שימשוך יותר לקוחות? <br />
+            <a href="#contact" className="underline hover:text-[#D97706] transition">לחץ כאן והתחל בתהליך פשוט ונעים.</a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-[#1F2937]">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white text-center">שאלות נפוצות</h2>
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-bold text-[#F59E0B] mb-2">כמה זמן לוקח לבנות אתר?</h3>
+              <p className="text-gray-300">אתר מוכן תוך כמה ימים, כולל עיצוב, תוכן וטופס פניות.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-[#F59E0B] mb-2">האם אני צריך לדעת קוד?</h3>
+              <p className="text-gray-300">ממש לא! אני דואג להכל – אתה רק צריך לספר לי מה העסק שלך צריך.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-[#F59E0B] mb-2">כמה זה עולה?</h3>
+              <p className="text-gray-300">המחיר נגיש ומשתנה לפי הצרכים שלך. אשמח לתת הצעת מחיר מותאמת בשיחה ראשונית.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -279,41 +344,16 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-[#111827] text-white py-12 border-t border-[#F59E0B]/20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <Image src="/screenshots/f790f3e3-043a-4508-b800-74bd70f0b694.PNG" alt="VASLY STUDIO Logo" width={56} height={56} className="object-contain" />
-              </div>
-              <p className="text-gray-400">בניית אתרים פשוטה וברורה לעסקים קטנים.</p>
-            </div>
-
-            {[
-              {
-                title: "שירותים",
-                links: ["אתר תדמית", "עיצוב אישי", "טקסטים", "טופס יצירת קשר"],
-              },
-              {
-                title: "מידע",
-                links: ["איך זה עובד", "שאלות נפוצות", "מחירים", "צור קשר"],
-              },
-              {
-                title: "חברה",
-                links: ["אודות", "דוגמאות", "צור קשר", "מדיניות פרטיות"],
-              },
-            ].map((column, index) => (
-              <div key={index}>
-                <h3 className="font-bold text-lg mb-4 text-white">{column.title}</h3>
-                <ul className="space-y-2">
-                  {column.links.map((link, linkIndex) => (
-                    <li key={linkIndex}>
-                      <a href="#" className="text-gray-400 hover:text-[#F59E0B] transition-colors">
-                        {link}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          <div className="flex flex-col items-center justify-center gap-4">
+            <span className="font-bold text-xl text-white tracking-widest mb-2">VASLY STUDIO</span>
+            <nav>
+              <ul className="flex flex-wrap gap-8 justify-center items-center">
+                <li><a href="#services" className="text-white hover:text-[#F59E0B] transition-colors font-medium">שירותים</a></li>
+                <li><a href="#projects" className="text-white hover:text-[#F59E0B] transition-colors font-medium">דוגמאות</a></li>
+                <li><a href="#about" className="text-white hover:text-[#F59E0B] transition-colors font-medium">אודות</a></li>
+                <li><a href="#contact" className="text-white hover:text-[#F59E0B] transition-colors font-medium">צור קשר</a></li>
+              </ul>
+            </nav>
           </div>
 
           <div className="border-t border-[#F59E0B]/20 mt-12 pt-8 text-center text-gray-400">
